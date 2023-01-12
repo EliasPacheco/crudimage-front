@@ -34,7 +34,8 @@ export default function Dashboard() {
         if (user) {
             const searchImage = async () => {
                 const res = await get({
-                    url: `https://crudimage.herokuapp.com/api/v1/imagens/${user["user"]["id"]}`,
+                    url: `https://crudimage.herokuapp.com/api/v1/imagens/${user["user"]["id"]}`, 
+
                 });
                 console.log(res);
 
@@ -51,7 +52,7 @@ export default function Dashboard() {
         formData.append("id", id);
 
         const res = await _delete({
-            url: "https://faculdade.herokuapp.com/api/v1/imagens/",
+            url: "https://crudimage.herokuapp.com/api/v1/imagens/",
             data: formData,
         });
 
@@ -152,7 +153,7 @@ export default function Dashboard() {
                             }}
                         >
                             <img
-                                src={`https://faculdade.herokuapp.com${item.imagem}`}
+                                src={`https://crudimage.herokuapp.com${item.imagem}`}
                                 alt={item.name}
                                 width={200}
                                 height={150}
