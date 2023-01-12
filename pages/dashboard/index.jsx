@@ -34,7 +34,7 @@ export default function Dashboard() {
         if (user) {
             const searchImage = async () => {
                 const res = await get({
-                    url: `https://faculdade.herokuapp.com/api/v1/imagens/${user["user"]["id"]}`,
+                    url: `https://crudimage.herokuapp.com/api/v1/imagens/${user["user"]["id"]}`,
                 });
                 console.log(res);
 
