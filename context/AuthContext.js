@@ -52,6 +52,7 @@ export default function AuthProvider(props) {
                 }
             })
             .catch((e) => 401);
+            console.log(response);
 
         return response;
     }
@@ -89,6 +90,7 @@ export default function AuthProvider(props) {
                 }
             })
             .catch((e) => 401);
+            console.log(response);
 
         return response;
     }

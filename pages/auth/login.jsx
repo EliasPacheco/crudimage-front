@@ -32,6 +32,7 @@ export default function Entrar() {
 
         e.preventDefault();
         const res = await Login({ email, password });
+        console.log(res);
         if (res == 401) {
             setError("Email ou senha inválidos");
         }
